@@ -29,7 +29,7 @@ class ICIBA(WebService):
             'Accept': 'text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01'}
         # try:
         request = urllib2.Request(
-            'http://www.iciba.com/index.php?a=getWordMean&c=search&word=' + self.word.encode('utf-8'), headers=headers)
+            'http://www.iciba.com/index.php?a=getWordMean&c=search&word=' + self.word, headers=headers)
         resp = json.loads(urllib2.urlopen(request).read())
         # self.cache_this(resp['baesInfo']['symbols'][0])
         # self.cache_this(resp['sentence'])
